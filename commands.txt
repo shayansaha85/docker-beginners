@@ -1,0 +1,19 @@
+For showing all the images
+> docker image ls
+
+------------------------------------------------
+
+For pushing in docker hub
+> docker tag <root-dir> <repository>/<root-dir>
+> docker push <repository>/<root-dir>
+
+* <repository> --> is the docker id (shayansaha85)
+
+------------------------------------------------
+
+For running docker app
+> docker run <root-dir>
+
+* here the <root-dir> --> hello_docker
+
+------------------------------------------------

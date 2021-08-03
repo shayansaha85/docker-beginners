@@ -1,0 +1,97 @@
+linux distribution example :
+
+1. ubuntu
+2. debian
+3. alpine
+4. fedora
+5. centos
+
+'linux distribution' are also called 'linux distros'
+
+
+Running ubuntu
+------------------------
+1. search docker hub --> ubuntu
+2. terminal we can run > docker pull ubuntu
+3. for running a distribution in interactive mode we can run >docker run -it ubuntu
+4. after that the shell will appear in the console
+
+Notes
+- linux cmd are case sensitive
+- linux we use forward slash as file separator
+- using up and down arrows we can go to previous and latest commands
+- history command for all the commands we have used
+- in history all the used commands will be an ordered list
+- in the shell we can type !* [where * is the SL of command] and can run that command
+
+
+
+managing packages
+--------------------
+- apt is the package manager of ubuntu
+
+- installing a package 'nano' which is a text editor
+- to install nano in ubuntu
+- we have to run > apt install nano
+
+- to check all packages > apt list
+- to update packages > apt update
+- before installing a package we should first run > apt update
+
+- for removing a pkg we have to run > apt remove <pkg-name>
+
+
+
+- in linux everything is a file
+- linux file system :
+    /
+        bin -- all binaries
+        boot -- all boot related file
+        dev -- all devices
+        etc -- editable text configurations
+        home -- home directory
+        root -- home directory of root user
+        lib -- keeping libraries/dependencies
+        var -- files which we update frequently (e.g. logs)
+        proc -- files that represents running processes
+
+navigating files
+---------------------------
+> pwd -- to check current location
+> ls -- for list of all files and folders
+> ls -1 -- for seeing all files in line
+> ls -l -- for seeing more description of files
+> cd <path> -- for switching directories
+> cd .. -- previous directory
+> cd ../.. -- root directory
+> cd ~ -- home directory
+
+handling files
+---------------
+> mkdir test -- creates folder named 'test'
+> mv test docker -- moving test into docker
+> touch hello.txt -- creates a file
+> mv hello.txt hello-docker.txt -- renaming the file
+> mv hello.txt /etc -- moving file from current dir to etc
+> rm file1.txt -- removes file
+> rm file* -- remove all files that starts with 'file'
+> rm -r docker -- removing 'docker' folder
+
+
+editing files
+--------------
+> cat file.txt -- see content of file (short file)
+> more file.txt -- see content of file (long file)
+    disadvantage of 'more' -- we can't scroll up
+> less file.txt -- see content of file (long file)
+    advantage of 'less' -- we can scroll up and down with arrow keys
+> head -n 5 file.txt -- can see first 5 lines
+> tail -n 5 file.txt -- can see last 5 lines
+
+
+redirection
+------------
+> cat file.txt > file_copy.txt -- can redirect the contents of file.txt to file_copy.txt
+    here the '>' is the redirection operator
+> echo hello > hello.txt -- if we read hello.txt it will print hello
+> 
